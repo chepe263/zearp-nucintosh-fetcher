@@ -5,7 +5,7 @@ import _ from 'lodash';
  * inside an array. Then pretend the result is a buffer.
  * This is specially for plist "data" type, since plist library makes a buffer
  * @param {String} hex_str - the hex like string 
- * @returns {Array<Number>} - An array with each hex pair as a number (Integer, probably)
+ * @returns {Buffer} - An array with each hex pair as a number (Integer, probably)
  */
 export default function(hex_str){
     hex_str = hex_str.trim().replace(/\s+/g,'')
@@ -14,6 +14,6 @@ export default function(hex_str){
         return Number(`0x${o}`)
     })
     // console.log(pairs, new_data)
-    return new_data;
+    return Buffer.from(new_data);
 
 }
