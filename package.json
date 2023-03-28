@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.mjs",
-    "test": "nodemon index.mjs"
+    "test": "nodemon index.mjs --trace-warnings"
   },
   "author": "",
   "license": "ISC",
